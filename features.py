@@ -5,7 +5,7 @@ def countProAntiRatio(text):
     matchedWords = 0
 
     for word in words:
-        if word.startswith('pro') or word.startswith('pro'):
+        if word.startswith('pro-') or word.startswith('anti'):
             matchedWords += 1
 
     return matchedWords/len(words)
