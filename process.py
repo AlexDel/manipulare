@@ -1,5 +1,6 @@
 import json
 import numpy
+import scipy
 from features import countProAntiRatio
 
 biasedData = []
@@ -36,5 +37,8 @@ with open('/home/alexdel/reactor/manipulare/unbiased_data/tel_results.json') as 
 with open('/home/alexdel/reactor/manipulare/unbiased_data/wp_results.json') as data_file:
     unBiasedData.extend(json.load(data_file))
 
-for article in biasedData:
-    proAntiRatioListPos.append(countProAntiRatio(article['articleText']))
+proAntiRatioListNeg = []
+for article in unBiasedData:
+    proAntiRatioListNeg.append(countProAntiRatio(article['articleText']))
+
+print(scipy.stats.ttest_ind(proAntiRatioListPos, proAntiRatioListNeg, axis=0, equal_var=False))
