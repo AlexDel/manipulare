@@ -3,6 +3,11 @@ import numpy
 import scipy
 from features import countProAntiRatio
 
+from pymongo import MongoClient
+client = MongoClient('localhost:27017')
+db = client.manipulation
+
+
 biasedData = []
 
 with open('/home/alexdel/reactor/manipulare/biased_data/nyt_results.json') as data_file:
@@ -20,8 +25,9 @@ with open('/home/alexdel/reactor/manipulare/biased_data/wp_results.json') as dat
 
 proAntiRatioListPos = []
 for article in biasedData:
-    proAntiRatioListPos.append(countProAntiRatio(article['articleText']))
-
+    article['features'] = {}
+    article['features']['proAntiRatio'] = countProAntiRatio(article['articleText'])
+    #db.articles.insert(article)
 
 unBiasedData = []
 
@@ -39,6 +45,8 @@ with open('/home/alexdel/reactor/manipulare/unbiased_data/wp_results.json') as d
 
 proAntiRatioListNeg = []
 for article in unBiasedData:
-    proAntiRatioListNeg.append(countProAntiRatio(article['articleText']))
+    article['features'] = {}
+    article['features']['proAntiRatio'] = countProAntiRatio(article['articleText'])
+    db.articles.insert(article)
 
-print(scipy.stats.ttest_ind(proAntiRatioListPos, proAntiRatioListNeg, axis=0, equal_var=False))
+#print(scipy.stats.ttest_ind(proAntiRatioListPos, proAntiRatioListNeg, axis=0, equal_var=False))
