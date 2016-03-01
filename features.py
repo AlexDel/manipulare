@@ -10,5 +10,15 @@ def countProAntiRatio(text):
 
     return matchedWords/len(words)
 
+def countSovietRatio(text):
+    words = cleanTextData(text)
+    matchedWords = 0
+
+    for word in words:
+        if word.find('soviet') > -1:
+            matchedWords += 1
+
+    return matchedWords/len(words)
+
 
 
