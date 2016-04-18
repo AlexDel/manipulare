@@ -20,5 +20,21 @@ def countSovietRatio(text):
 
     return matchedWords/len(words)
 
+def countNaziTermRatio(text):
+    #prepare nazi words list
+    with open('data/words/nazi_term.txt') as f:
+        naziWords = f.readlines()
+        naziWords = [w.lower()  for w in naziWords if w != '']
+
+    normalText = text.lower()
+
+    wordsFound = 0
+    for w in naziWords:
+        wordsFound += normalText.count(w)
+
+    return wordsFound/len(normalText.split())
+
+
+
 
 
