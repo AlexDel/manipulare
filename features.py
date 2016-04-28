@@ -30,7 +30,11 @@ def countNaziTermRatio(text):
 
     wordsFound = 0
     for w in naziWords:
-        wordsFound += normalText.count(w)
+        w = w.strip()
+        if normalText.count(w) > 0 and len(w) > 2:
+            print(w)
+            wordsFound += normalText.count(w)
+
 
     return wordsFound/len(normalText.split())
 
