@@ -38,6 +38,24 @@ def countNaziTermRatio(text):
 
     return wordsFound/len(normalText.split())
 
+def countCustomMarkersRatio(text):
+    #prepare nazi words list
+    with open('data/words/manip_markers.txt') as f:
+        customMarkers = f.readlines()
+        customMarkers = [w.lower()  for w in customMarkers if w != '']
+
+    normalText = text.lower()
+
+    wordsFound = 0
+    for w in customMarkers:
+        w = w.strip()
+        if normalText.count(w) > 0 and len(w) > 2:
+            print(w)
+            wordsFound += normalText.count(w)
+
+
+    return wordsFound/len(normalText.split())
+
 
 
 
