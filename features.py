@@ -73,6 +73,16 @@ def countMilitaryTermsRatio(text):
 
     return wordsFound/len(normalText.split())
 
+def countPutinRatio(text):
+    words = cleanTextData(text)
+    matchedWords = 0
+
+    for word in words:
+        if word.find('putin') > -1:
+            matchedWords += 1
+
+    return matchedWords/len(words)
+
 
 
 

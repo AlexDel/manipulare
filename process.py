@@ -1,7 +1,7 @@
 import json
 import numpy
 import scipy
-from features import countProAntiRatio, countSovietRatio, countNaziTermRatio, countCustomMarkersRatio, countMilitaryTermsRatio
+from features import countProAntiRatio, countSovietRatio, countNaziTermRatio, countCustomMarkersRatio, countMilitaryTermsRatio, countPutinRatio
 
 from pymongo import MongoClient
 client = MongoClient('localhost:27017')
@@ -9,14 +9,14 @@ db = client.manipulation
 
 articles = db.articles.find({})
 
-featureName = 'militaryTermsRatio'
+featureName = 'putinRatio'
 
 for a in articles:
     db.articles.update({
       '_id': a['_id']
     },{
       '$set': {
-        'features.' + featureName: countMilitaryTermsRatio(a['articleText'])
+        'features.' + featureName: countPutinRatio(a['articleText'])
       }
     }, upsert=False, multi=False)
 
