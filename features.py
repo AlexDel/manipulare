@@ -50,11 +50,29 @@ def countCustomMarkersRatio(text):
     for w in customMarkers:
         w = w.strip()
         if normalText.count(w) > 0 and len(w) > 2:
+            wordsFound += normalText.count(w)
+
+
+    return wordsFound/len(normalText.split())
+
+def countMilitaryTermsRatio(text):
+    #prepare nazi words list
+    with open('data/words/military_terms.txt') as f:
+        militaryTerms = f.readlines()
+        militaryTerms = [w.lower()  for w in militaryTerms if w != '']
+
+    normalText = text.lower()
+
+    wordsFound = 0
+    for w in militaryTerms:
+        w = w.strip()
+        if normalText.count(w) > 0 and len(w) > 2:
             print(w)
             wordsFound += normalText.count(w)
 
 
     return wordsFound/len(normalText.split())
+
 
 
 

@@ -1,0 +1,758 @@
+abort 
+acceptability  
+accountability 
+acquire 
+acquisition 
+activation 
+adversary 
+aerial picket 
+aerial port 
+aerodynamic missile 
+aeromedical evacuation 
+aerospace defense 
+afloat 
+aggressor forces 
+aimpoint 
+air portable 
+airborne 
+airburst 
+aircraft 
+aircrafts
+air-defense systems
+airdrop 
+airfield 
+airlift 
+airmobile 
+airspace 
+airspeed 
+air-to-air
+air-to-surface
+airways 
+alliance 
+allocation 
+allotment 
+allowable 
+ammunition 
+amphibian 
+amphibious 
+anchor 
+anchorage 
+annex 
+annotated print 
+annotation 
+antemortem 
+antenna mine 
+antiarmor helicopter 
+anticountermining device 
+anti-g suit 
+antilift device 
+antipersonnel 
+antiradiation 
+antirecovery 
+antisubmarine 
+antisurface air operation 
+antisweep device 
+antisweeper mine 
+antitank helicopter 
+antitank mine 
+antiterrorism 
+antiwatching device 
+apron 
+archipelagic sea lanes passage
+architecture 
+armed forces  
+armed mine 
+armistice 
+armistice 
+armored reconnaissance vehicles
+army 
+artillery 
+artillery
+assault
+at priority call .
+atomic air burst 
+atomic warfare 
+atomic weapon 
+attack 
+attrition 
+authenticate 
+authentication 
+authenticator 
+autocode format 
+aviation 
+backfill 
+back-haul airlift 
+backscatter 
+back-scattering 
+backshore 
+backwash 
+balisage 
+ballistic missile 
+bandwidth 
+bank angle 
+battalions
+battery 
+battle 
+battlefield 
+battlespace 
+blind transmission 
+blister agent 
+blocking
+bomb 
+bomber 
+bombing 
+bonding 
+booster 
+border 
+borei-class submarines
+bottom mine 
+breakaway 
+breakbulk 
+bridgehead 
+briefing 
+brigade  
+broach 
+buddy-aid 
+buffer 
+burnout 
+burn-through range 
+cache 
+camouflage 
+campaign 
+capability 
+capacity 
+capstone 
+capsule 
+cargo 
+carrier air wing 
+catalytic attack 
+catapult 
+causeway 
+c-day 
+cease fire 
+cease fire line 
+ceiling 
+celestial guidance 
+celestial sphere 
+cell 
+censorship 
+center 
+chalk commander 
+chalk number 
+chalk troops 
+chart sheet 
+chemical
+biological
+radiological
+nuclear defense 
+chuffing 
+cipher 
+civil defense 
+clearance capacity 
+clutter 
+coalition 
+coassembly 
+combat 
+combatant 
+combustor 
+command 
+container 
+containerization 
+containership 
+contingency 
+contingent 
+convergence 
+convoy 
+escort 
+counterair 
+counterattack 
+counterbattery 
+counterdeception 
+counterdrug
+counterdrug 
+counterfire 
+counterforce 
+counterguerrilla 
+counterinsurgency 
+counterintelligence 
+countermeasures 
+countermine 
+countermobility 
+countermove 
+counteroffensive 
+counterpreparation 
+counterproliferation 
+counterpropaganda 
+counterreconnaissance 
+countersabotage 
+countersign 
+countersubversion 
+countersurveillance 
+counterterrorism 
+courier 
+cover 
+coverage
+covering fire 
+crash 
+cratering 
+crater 
+creeping mine 
+crest 
+crisis 
+crossing area 
+cross-leveling 
+cross-loading 
+cross-servicing 
+cross-targeting 
+cryogenic 
+cryptanalysis 
+cryptochannel 
+cryptographic 
+cryptologic 
+cryptology 
+cryptomaterial 
+cryptopart 
+cryptosecurity 
+cryptosystem 
+cyber 
+cyberspace
+cease-fire
+chocking 
+convoys of weapons
+damage 
+danger 
+dazzle 
+d-day 
+dead mine 
+dead space  
+deadline 
+de-arming 
+debarkation 
+debarkation 
+deceased 
+decentralized 
+deception 
+deck alert 
+declassification 
+declassify 
+declination 
+decompression 
+decoy 
+decrypt 
+defense 
+defensive 
+defilade 
+definitive 
+defoliant 
+degaussing 
+demilitarized 
+demobilization 
+demolition 
+departure airfield 
+departure area 
+departure end 
+departure point 
+deployment 
+depot 
+depth 
+destruction 
+detained 
+detainee 
+deterioration 
+deterrence 
+deterrent options 
+detonating cord 
+detonator 
+deviation 
+diaphragm stop 
+diapositive 
+direct fire 
+disabling fire 
+disarmament 
+disarmed mine 
+disembarkation 
+disengagement 
+dispenser 
+dispersal 
+dispersion 
+disposition 
+disruptive 
+dissemination and integration 
+dissemination system 
+ditching 
+doppler effect 
+doppler radar 
+drift 
+drone 
+dual-capable 
+dud 
+dummy 
+dump 
+dwell time 
+earmarking of stocks 
+earthing 
+echelon 
+ejection 
+electronic warfare systems
+elevation 
+elicitation
+eligible traffic 
+embarkation 
+emergency 
+emission 
+emplacement 
+employment 
+enabling force 
+encipher 
+endurance 
+engagement 
+envelopment 
+equipment 
+escort 
+espionage 
+evacuation 
+evacuee 
+evader 
+evasion 
+execute 
+executing 
+execution 
+exercise 
+exfiltration 
+exoatmosphere 
+expedition 
+expellee 
+exploitation 
+explosive 
+fairway 
+feasibility 
+feint 
+fender 
+ferret 
+field 
+fire 
+fireball 
+firepower 
+flanking attack 
+flare 
+flatted cargo 
+flight 
+footprint 
+force 
+forcible entry 
+fordability 
+foreshore 
+forward 
+front 
+frontal attack 
+frustrated cargo 
+full charge 
+gadget 
+garble 
+garnishing 
+garrison force 
+gear 
+georef 
+geospatial 
+glide bomb 
+glide mode 
+grad rocket launchers
+ground 
+guerrilla 
+guided
+gull 
+gun 
+harassing fire 
+harassment 
+harbor 
+hardstand 
+hardware 
+harmonization 
+hasty attack 
+hatch 
+havens 
+hazard 
+heavy antitank weapon 
+helicopter 
+helipad 
+heliport 
+herbicide 
+high airburst 
+homeland 
+horizon 
+horn 
+hostage 
+hostile 
+howitzer 
+howitzers
+hub 
+hunter track 
+hydrogen bomb 
+hypersonic 
+hyperstereoscopy 
+hypobaric 
+ignition 
+imprint 
+incident 
+indicator 
+indirect fire 
+infiltration 
+inflammable cargo 
+infrared 
+inshore patrol 
+inspection 
+insurgency 
+integration 
+intelligence 
+interagency 
+interceptor 
+interdiction 
+interface 
+interim 
+interned 
+interoperability 
+interoperation 
+interpretability 
+interpretation 
+inter-service 
+intertheater 
+interval 
+intervention 
+intracoastal 
+intransit 
+intratheater 
+intruder 
+intrusion 
+invasion 
+ionosphere 
+ir pointer 
+irregular forces 
+j-2x 
+jamming 
+j-axis 
+jet 
+jettison 
+joiner 
+jumpmaster 
+landmark 
+lap 
+laser 
+lashing 
+late 
+lattice
+launch 
+laundering 
+lay 
+leapfrog 
+leaver 
+leverage 
+liaison 
+lightening 
+lighterage 
+link 
+litter 
+littoral 
+load 
+localizer 
+lodgment 
+loran 
+lot 
+maneuver 
+manifest 
+manpower 
+map 
+margin 
+marker 
+marshalling 
+mayday 
+meaconing 
+megaton weapon 
+mensuration 
+merchant 
+message 
+microform 
+midcourse 
+military 
+mine 
+minefield 
+minehunting 
+misfire 
+missile 
+missile 
+missing 
+mission 
+mobility 
+mobilization 
+mock-up 
+mode 
+monitoring 
+moored 
+mortar 
+multichannel 
+munition 
+muzzle 
+napalm 
+narcoterrorism 
+nautical 
+navigation 
+neutralization 
+neutralize 
+no-fire 
+nonalignment 
+noncombatant 
+nondeferrable 
+nongovernmental 
+nonlethal 
+nonstandard 
+nonstocked 
+non-submarine 
+nuclear 
+nuclear arsenal
+nuclear warheads
+nuisance 
+objective 
+obligated 
+oblique 
+obliquity 
+observation 
+observer
+obstacle 
+obstructor 
+occupation 
+occupational 
+offensive 
+offset 
+oiler 
+operational 
+optimum 
+orbit 
+order 
+ordnance 
+oscillating mine 
+otter 
+outbound 
+overhaul 
+overlap 
+overlay 
+overpressure 
+overprint 
+overseas 
+pace 
+padding 
+pallet 
+parachute 
+paradrop 
+parrot 
+partisan
+passenger mile
+passive 
+password 
+pathfinders 
+pathogen 
+patient 
+patrol 
+payload 
+p-day 
+peacekeeping 
+peak overpressure 
+pencil beam 
+penetration 
+period 
+permafrost 
+persistency 
+personnel 
+phase 
+phony minefield 
+photoflash bomb 
+pictomap 
+pillbox 
+pilot’s trace 
+pinpoint 
+pipeline 
+piracy 
+pitch 
+plate 
+platform drop 
+plot 
+port 
+power projection 
+practice mine 
+prearranged fire 
+precautionary 
+precession 
+precursor 
+preinitiation 
+prevention 
+prisoner 
+proactive 
+probable 
+proclamation 
+procurement 
+provisioning 
+proword 
+pyrotechnic 
+quay 
+radar 
+radioactive 
+railhead 
+ratification 
+rationalization 
+ratline 
+r-day 
+reachback 
+reaction time 
+readiness 
+reattack 
+rectification 
+refugee 
+regrade 
+regular 
+reinforcement 
+reinforcing 
+remote 
+requisition 
+resistance 
+resupply 
+resuscitative care 
+retained personnel 
+reticle 
+retrofit 
+retrograde 
+riot 
+rocket 
+rocket
+route 
+rupture zone 
+ruse 
+sabotage 
+salted weapon 
+salvage 
+satellite 
+seaward 
+sector 
+security 
+sedition 
+segregation 
+seize 
+seizures 
+self-defense 
+self-destroying 
+self-protection 
+ship 
+shipping 
+shoal 
+shoreline 
+shortfall 
+short-range 
+shuttered 
+sinker 
+sonar 
+sonic 
+sonobuoy 
+source 
+split 
+sprocket 
+squadron 
+squib 
+squirt 
+staballoy
+staff 
+stimulants 
+stowage 
+strafing 
+straggler 
+strapping 
+strategic a
+stretcher 
+strikedown 
+subkiloton 
+submarine 
+submunition 
+subordinate 
+subsonic 
+supercargo 
+supplementary facilities 
+supply 
+suppression 
+surface warfare 
+surface-to-air guided missile
+surface-to-air missile
+surface-to-air missile envelope 
+surface-to-air missile installation 
+surface-to-air missile site 
+surface-to-air weapon 
+surface-to-surface guided missile 
+surveillance
+sustainment 
+swept path 
+switch horn 
+tactical 
+tactics 
+tagline 
+tanker 
+tanks
+target 
+targeting 
+taxiway 
+t-day 
+tear line 
+technical 
+terrain 
+terrestrial 
+terrorism 
+terrorist 
+thermal 
+threat 
+tophandler 
+toxin 
+trafficability 
+training 
+trajectory 
+transattack period 
+transfer loader
+transient 
+transition 
+transmission security 
+transonic 
+transponder 
+transportability 
+transportation 
+transporting 
+transshipment point 
+traverse 
+treason 
+troop 
+troops
+trucks
+turbojet 
+turnaround 
+uncharged demolition target 
+unclassified matter 
+understowed cargo 
+underwater demolition 
+uniformed 
+units
+unmanned 
+unscheduled convoy phase 
+unstable patient 
+unstuffing 
+unwanted cargo 
+unwarned exposed 
+urban triad 
+validate 
+vehicle 
+verification 
+verify 
+vertex 
+vetting 
+vignetting 
+visibility range 
+wanted cargo 
+war 
+warble 
+warhead 
+warp 
+weapon 
+weaponeering 
+weaponry
+withdrawal operation
