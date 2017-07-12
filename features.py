@@ -32,7 +32,6 @@ def countNaziTermRatio(text):
     for w in naziWords:
         w = w.strip()
         if normalText.count(w) > 0 and len(w) > 2:
-            print(w)
             wordsFound += normalText.count(w)
 
 
@@ -67,7 +66,6 @@ def countMilitaryTermsRatio(text):
     for w in militaryTerms:
         w = w.strip()
         if normalText.count(w) > 0 and len(w) > 2:
-            print(w)
             wordsFound += normalText.count(w)
 
 

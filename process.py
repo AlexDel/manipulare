@@ -1,28 +1,43 @@
-import json
-import numpy
-import scipy
+import os.path
+import sklearn
+from sklearn import tree
+from sklearn.feature_extraction import FeatureHasher
+import pickle
 from features import countProAntiRatio, countSovietRatio, countNaziTermRatio, countCustomMarkersRatio, countMilitaryTermsRatio, countPutinRatio
 
 from pymongo import MongoClient
 client = MongoClient('localhost:27017')
 db = client.manipulation
+articles = list(db.articles.find({}))
 
-articles = db.articles.find({})
+def process(text):
+  return {
+    'ProAntiRatio': countProAntiRatio(text),
+    'SovietLexicalRatio': countSovietRatio(text),
+    'NaziLexicalRatio': countNaziTermRatio(text),
+    'CustomMarkersRatio': countCustomMarkersRatio(text),
+    'MilitaryLexicalRatio': countMilitaryTermsRatio(text),
+    'PoliticalLexicalRation': countPutinRatio(text)
+  }
 
-featureName = 'putinRatio'
+def getModel():
+  fileName = 'mymodel.pkl'
+  if os.path.isfile(fileName):
+    with open(fileName, 'rb') as f:
+      clf = pickle.load(f)
+  else:
+    features = FeatureHasher(n_features=6).transform([process(article['articleText']) for article in articles]).toarray()
+    labels = [article['articleBiased'] for article in articles]
+    print(labels)
 
-for a in articles:
-    db.articles.update({
-      '_id': a['_id']
-    },{
-      '$set': {
-        'features.' + featureName: countPutinRatio(a['articleText'])
-      }
-    }, upsert=False, multi=False)
+    clf = tree.DecisionTreeClassifier()
+    clf = clf.fit(features, labels)
+    pickle.dump(clf, open("mymodel.pkl", "wb"))
+  return clf
 
-
-pos = db.articles.find({"articleBiased": True})
-neg = db.articles.find({"articleBiased": False})
-
-print(scipy.stats.ttest_ind([i['features'][featureName ] for i in neg], [i['features'][featureName ] for i in pos], axis=0, equal_var=False))
-
+def predict(text):
+  clf = getModel()
+  featuresValues = process(text)
+  vector = FeatureHasher(n_features=6).transform([featuresValues]).toarray()
+  result = clf.predict(vector)
+  return {'result': result[0], 'values': featuresValues}
