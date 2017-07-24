@@ -5,6 +5,8 @@ mongoexport --db manipulation --collection articles --out ~/articles.json --json
 virtualenv --python=/usr/bin/python3.5 ./bias_venv
 source ./bias_venv/bin/activate
 
-
 // instal reqs
 pip install -r reqs.txt
+
+// Gunicorn launch
+gunicorn server:application
