@@ -1,0 +1,10 @@
+// Export data from mongo
+mongoexport --db manipulation --collection articles --out ~/articles.json --jsonArray
+
+// virtuale env start
+virtualenv --python=/usr/bin/python3.5 ./bias_venv
+source ./bias_venv/bin/activate
+
+
+// instal reqs
+pip install -r reqs.txt

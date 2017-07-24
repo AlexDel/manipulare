@@ -6,9 +6,7 @@ import pickle
 from features import countProAntiRatio, countSovietRatio, countNaziTermRatio, countCustomMarkersRatio, countMilitaryTermsRatio, countPutinRatio
 
 from pymongo import MongoClient
-client = MongoClient('localhost:27017')
-db = client.manipulation
-articles = list(db.articles.find({}))
+
 
 def process(text):
   return {
@@ -20,12 +18,16 @@ def process(text):
     'PoliticalLexicalRation': countPutinRatio(text)
   }
 
+
 def getModel():
   fileName = 'mymodel.pkl'
   if os.path.isfile(fileName):
     with open(fileName, 'rb') as f:
       clf = pickle.load(f)
   else:
+    client = MongoClient('localhost:27017')
+    db = client.manipulation
+    articles = list(db.articles.find({}))
     features = FeatureHasher(n_features=6).transform([process(article['articleText']) for article in articles]).toarray()
     labels = [article['articleBiased'] for article in articles]
     print(labels)
@@ -34,6 +36,7 @@ def getModel():
     clf = clf.fit(features, labels)
     pickle.dump(clf, open("mymodel.pkl", "wb"))
   return clf
+
 
 def predict(text):
   clf = getModel()

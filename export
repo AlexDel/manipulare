@@ -1,1 +1,0 @@
-mongoexport --db manipulation --collection articles --out ~/articles.json --jsonArray

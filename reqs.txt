@@ -3,3 +3,5 @@ scipy
 numpy
 scikit-learn
 pymongo
+django
+gunicorn
