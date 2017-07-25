@@ -1,10 +1,13 @@
 import os
 import sys
 
+from django.conf.urls import url
+from django.core.wsgi import get_wsgi_application
+from django.http import HttpResponse, JsonResponse
 from django.conf import settings
-from django.http import JsonResponse
 from django.template import Template, Context
 from django.views.decorators.http import require_GET, require_POST
+from django.views.static import serve
 from process import predict
 
 DEBUG = os.environ.get('DEBUG', 'on') == 'on'
@@ -13,8 +16,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', os.urandom(32))
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
 
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
 settings.configure(
-  DEBUG=DEBUG,
+  DEBUG=True,
   SECRET_KEY=SECRET_KEY,
   ALLOWED_HOSTS=ALLOWED_HOSTS,
   ROOT_URLCONF=__name__,
@@ -23,19 +29,19 @@ settings.configure(
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
   ),
+  STATIC_URL = '/static/',
+  STATIC_ROOT = os.path.join(os.path.realpath(os.path.dirname(__file__)), 'media'),
   TEMPLATES = [
     {
       'BACKEND': 'django.template.backends.django.DjangoTemplates',
       'DIRS': [],
       'APP_DIRS': True
     },
-  ]
+  ],
+  TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.static',
+  )
 )
-
-from django.conf.urls import url
-from django.core.wsgi import get_wsgi_application
-from django.http import HttpResponse
-
 
 @require_GET
 def index(req):
@@ -75,10 +81,11 @@ def estimate(req):
     estimation = predict(req.POST['text'])
     return JsonResponse(estimation)
 
-urlpatterns = (
+urlpatterns = [
   url(r'^$', index),
-  url(r'^api/text/estimate$', estimate)
-)
+  url(r'^api/text/estimate$', estimate),
+  url(r'^static/(.*)$', serve, {'document_root': STATIC_ROOT, 'show_indexes': True}),
+]
 
 
 application = get_wsgi_application()
