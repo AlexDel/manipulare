@@ -18,11 +18,16 @@
 	function BiasWrapperCtrl ($http) {
 		var ctrl = this;
 
-		this.text = '';
-		this.code = '';
+		ctrl.text = '';
+		ctrl.code = '';
+		ctrl.resultFetched = false;
+		ctrl.result = null;
 
 		this.checkText = function () {
-			$http.post('api/text/estimate', {code: this.code, text: this.text})
+			$http.post('api/text/estimate', {code: this.code, text: this.text}).then(function(payload) {
+				ctrl.resultFetched = true;
+				ctrl.result = payload.data;
+			})
 		}
 	}
 

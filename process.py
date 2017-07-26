@@ -42,8 +42,8 @@ def predict(text):
   featuresValues = process(text)
   vector = FeatureHasher(n_features=6).transform([featuresValues]).toarray()
   result = clf.predict(vector)
+
   #tweak for correct Boolean json serialization
-  print(sum(featuresValues.values()))
   if result[0] and sum(featuresValues.values()):
     jsonRes = True
   else:

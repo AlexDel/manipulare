@@ -10,3 +10,4 @@ pip install -r reqs.txt
 
 // Gunicorn launch
 gunicorn server:application
+gunicorn -b 0.0.0.0:10000 server:application &
