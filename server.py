@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 
 from django.conf.urls import url
 from django.core.wsgi import get_wsgi_application
@@ -8,6 +9,7 @@ from django.conf import settings
 from django.template import Template, Context
 from django.views.decorators.http import require_GET, require_POST
 from django.views.static import serve
+from django.views.decorators.csrf import csrf_exempt
 from process import predict
 
 DEBUG = os.environ.get('DEBUG', 'on') == 'on'
@@ -60,6 +62,10 @@ def index(req):
       <link href="/static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
+      <div ng-app="bias">
+        <bias-wrapper>
+        </bias-wrapper>
+      </div>
       <!--  Scripts-->
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
@@ -73,12 +79,14 @@ def index(req):
 
 
 @require_POST
+@csrf_exempt
 def estimate(req):
-  code = req.POST['code']
+  reqObj = json.loads(req.body.decode('utf-8'))
+  code = reqObj['code']
   if code != 'test':
-    HttpResponse('Invalid code', status=401)
+    return HttpResponse('Invalid code', status=401)
   else:
-    estimation = predict(req.POST['text'])
+    estimation = predict(reqObj['text'])
     return JsonResponse(estimation)
 
 urlpatterns = [

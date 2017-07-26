@@ -1,0 +1,8 @@
+<textarea ng-model="$ctrl.text" rows="30" placeholder="Enter your text"></textarea>
+<input type="text" placeholder="Enter your code" ng-model="$ctrl.code"/>
+
+<button
+        ng-disabled="$ctrl.text === '' || $ctrl.code === ''"
+        ng-click="$ctrl.onSubmit()">
+    Check text
+</button>

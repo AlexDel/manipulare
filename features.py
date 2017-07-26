@@ -24,18 +24,17 @@ def countNaziTermRatio(text):
     #prepare nazi words list
     with open('data/words/nazi_term.txt') as f:
         naziWords = f.readlines()
-        naziWords = [w.lower()  for w in naziWords if w != '']
+        naziWords = [w.lower().strip()  for w in naziWords if w != '']
 
-    normalText = text.lower()
+    textWords = text.lower().split()
 
     wordsFound = 0
-    for w in naziWords:
-        w = w.strip()
-        if normalText.count(w) > 0 and len(w) > 2:
-            wordsFound += normalText.count(w)
+    for w in textWords:
+        if w in naziWords and len(w) > 2:
+            wordsFound += 1
 
 
-    return wordsFound/len(normalText.split())
+    return wordsFound/len(textWords)
 
 def countCustomMarkersRatio(text):
     #prepare nazi words list
@@ -50,7 +49,6 @@ def countCustomMarkersRatio(text):
         w = w.strip()
         if normalText.count(w) > 0 and len(w) > 2:
             wordsFound += normalText.count(w)
-
 
     return wordsFound/len(normalText.split())
 

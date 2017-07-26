@@ -1,10 +1,8 @@
-﻿Allies
-Anschluss 
+﻿Anschluss
 Antisemitism
 Aryan
 Assimilation
-Auschwitz 
-Axis
+Auschwitz
 Babi Yar 
 Bar-Mitzvah 
 Beer Hall Putsch 
@@ -115,9 +113,7 @@ Resettlement
 Revisionists
 Riefenstahl, Leni
 Righteous Gentiles
-SA
-Sachsenhausen 
-SD 
+Sachsenhausen
 Hannah Sennesh 
 Shoah 
 Shtetl 
@@ -126,8 +122,7 @@ Siddur
 Sobibór 
 Social Darwinism
 Socialism
-Sonderkommando 
-SS 
+Sonderkommando
 Stalin, Joseph
 Star of David
 Stereotype

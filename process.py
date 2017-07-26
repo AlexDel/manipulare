@@ -15,7 +15,7 @@ def process(text):
     'NaziLexicalRatio': countNaziTermRatio(text),
     'CustomMarkersRatio': countCustomMarkersRatio(text),
     'MilitaryLexicalRatio': countMilitaryTermsRatio(text),
-    'PoliticalLexicalRation': countPutinRatio(text)
+    'PoliticalLexicalRation': countPutinRatio(text),
   }
 
 
@@ -30,9 +30,8 @@ def getModel():
     articles = list(db.articles.find({}))
     features = FeatureHasher(n_features=6).transform([process(article['articleText']) for article in articles]).toarray()
     labels = [article['articleBiased'] for article in articles]
-    print(labels)
 
-    clf = tree.DecisionTreeClassifier()
+    clf = tree.DecisionTreeClassifier(criterion='entropy', splitter='random',class_weight={True:1, False: 10})
     clf = clf.fit(features, labels)
     pickle.dump(clf, open("mymodel.pkl", "wb"))
   return clf
@@ -43,4 +42,11 @@ def predict(text):
   featuresValues = process(text)
   vector = FeatureHasher(n_features=6).transform([featuresValues]).toarray()
   result = clf.predict(vector)
-  return {'result': result[0], 'values': featuresValues}
+  #tweak for correct Boolean json serialization
+  print(sum(featuresValues.values()))
+  if result[0] and sum(featuresValues.values()):
+    jsonRes = True
+  else:
+    jsonRes = False
+
+  return {'result': jsonRes, 'values': featuresValues}
