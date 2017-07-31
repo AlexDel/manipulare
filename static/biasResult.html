@@ -1,0 +1,58 @@
+<div class="card blue lighten-1">
+    <div class="card-content white-text">
+        <div class="estimation-result">
+            <div ng-if="!$ctrl.result.result">
+                <i class="material-icons medium" style="color: white;">check_circle</i> This text doesn't seem to have any bias.
+            </div>
+            <div ng-if="$ctrl.result.result">
+                <i class="material-icons medium" style="color: red;">blur_on</i> There be bias! This text may be biased.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<table class="responsive-table">
+    <thead>
+    <tr>
+        <th>Feature name</th>
+        <th>Feature ratio (%)</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>Custom markers (opionated adjectives and strong violent verbs)</td>
+        <td>{{$ctrl.result.values.CustomMarkersRatio}}</td>
+    </tr>
+    <tr>
+        <td>Military terms</td>
+        <td>{{$ctrl.result.values.MilitaryLexicalRatio}}</td>
+    </tr>
+    <tr>
+        <td>Terms related to Nazism</td>
+        <td>{{$ctrl.result.values.NaziLexicalRatio}}</td>
+    </tr>
+    <tr>
+        <td>Political persons mentioned</td>
+        <td>{{$ctrl.result.values.PoliticalLexicalRation}}</td>
+    </tr>
+    <tr>
+        <td>Words starting with 'pro-' and 'anti-' prefixes</td>
+        <td>{{$ctrl.result.values.ProAntiRatio}}</td>
+    </tr>
+    <tr>
+        <td>Terms related to 'Soviet' lexeme</td>
+        <td>{{$ctrl.result.values.SovietLexicalRatio}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="back-to-form">
+    <a class="btn waves-effect waves-left"
+       ng-click="$ctrl.onReset()">
+        Back to form
+        <i class="material-icons right">keyboard_return</i>
+    </a>
+
+</div>

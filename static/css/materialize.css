@@ -3161,7 +3161,7 @@ td, th {
 }
 
 .progress .indeterminate {
-  background-color: #26a69a;
+  background-color: #29b6f6;
 }
 
 .progress .indeterminate:before {
@@ -4899,7 +4899,7 @@ small {
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   #toast-container {
-    left: 5%;
+    left: 40%;
     bottom: 7%;
     max-width: 90%;
   }
@@ -4908,7 +4908,7 @@ small {
 @media only screen and (min-width: 993px) {
   #toast-container {
     top: 10%;
-    right: 7%;
+    right: 40%;
     max-width: 86%;
   }
 }
@@ -6448,7 +6448,7 @@ textarea.materialize-textarea {
   padding: .8rem 0 1.6rem 0;
   /* prevents text jump on Enter keypress */
   resize: none;
-  min-height: 3rem;
+  min-height: 10rem;
 }
 
 textarea.materialize-textarea.validate + label {

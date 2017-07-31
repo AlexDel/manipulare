@@ -12,3 +12,29 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+.nav-wrapper span {
+	margin-left: 10px;
+}
+
+.nav-wrapper {
+	display: flex;
+}
+
+.estimation-result {
+	font-size: 25px;
+}
+
+.estimation-result i {
+	margin-right: 15px;
+}
+
+.estimation-result > div {
+	 display: flex;
+  align-items: center;
+}
+
+.back-to-form {
+	 margin-top: 30px;
+  margin-bottom: 30px;
+}

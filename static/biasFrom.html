@@ -1,8 +1,23 @@
-<textarea ng-model="$ctrl.text" rows="30" placeholder="Enter your text"></textarea>
-<input type="text" placeholder="Enter your code" ng-model="$ctrl.code"/>
+<form name="biasForm">
+    <div class="input-field">
+        <textarea required class="materialize-textarea" ng-model="$ctrl.text" id="txt-area" rows="30"></textarea>
+        <label for="txt-area">Paste your text here</label>
+    </div>
 
-<button
-        ng-disabled="$ctrl.text === '' || $ctrl.code === ''"
-        ng-click="$ctrl.onSubmit()">
-    Check text
-</button>
+    <div class="input-field">
+        <input required type="text" ng-model="$ctrl.code" id="code"/>
+        <label for="code">Enter your code</label>
+        <blockquote>
+            Don't have code? Write to <a href="mailto:xyz@verbalab.ru">xyz@verbalab.ru</a> to request one.
+        </blockquote>
+    </div>
+
+    <button
+            class="btn waves-effect waves-light"
+            ng-disabled="biasForm.$invalid"
+            ng-click="$ctrl.onSubmit()">
+        Check text
+         <i class="material-icons right">network_check</i>
+    </button>
+</form>
+

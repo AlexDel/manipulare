@@ -1,9 +1,63 @@
-<bias-form
-        text="$ctrl.text"
-        code="$ctrl.code"
-        on-submit="$ctrl.checkText()">
-</bias-form>
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+        <i class="material-icons medium">settings_ethernet</i> <span>Text bias estimation - SFU Applied linguistics and cognitive research lab</span>
+    </div>
+</nav>
 
-<div>
-    {{$ctrl.result | json}}
+
+
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col l8 s12 offset-l2">
+                <div class="progress" ng-show="$ctrl.isChecking">
+                    <div class="indeterminate"></div>
+                </div>
+
+                <bias-form
+                        ng-if="!$ctrl.resultFetched"
+                        text="$ctrl.text"
+                        code="$ctrl.code"
+                        on-submit="$ctrl.checkText()">
+                </bias-form>
+
+                <bias-result
+                        ng-if="$ctrl.resultFetched"
+                        result="$ctrl.result" on-reset="$ctrl.reset();">
+                </bias-result>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<footer class="page-footer orange">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Project Bio</h5>
+                <p class="grey-text text-lighten-4">
+                    Texts are checked for including political bias and manipulation patterns against trained models build from manually annotated corpus of social nets posts and articles from web-media.
+                    Corpus was annotated by professional linguists from Siberean Federal University,
+                </p>
+                <p>Theoretical concepts of the work are described in <a class="orange-text text-lighten-3" target="_blank" href="http://politlinguist.ru/materials/pl/58.pdf">Political Linguistics Journal</a></p>
+                <p class="grey-text text-lighten-4">
+                    <strong>Work is funded by "Top 5/100" foundation program @SFU</strong>
+                </p>
+            </div>
+            <div class="col l5 offset-l1 s12">
+                <h5 class="white-text">Project team</h5>
+                <ul>
+                    <li><a class="white-text" href="#!">Anastassia  Kolmogorova</a></li>
+                    <li><a class="white-text" href="#!">Julia Taldykina</a></li>
+                    <li><a class="white-text" target="_blank" href="https://www.facebook.com/alexander.kalinin.79">Alexander Kalinin</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Development and consulting by <a class="orange-text text-lighten-3" href="http://verbalab.ru">_verba(lab):</a>
+        </div>
+    </div>
+</footer>
