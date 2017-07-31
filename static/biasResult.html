@@ -1,11 +1,17 @@
 <div class="card blue lighten-1">
     <div class="card-content white-text">
         <div class="estimation-result">
-            <div ng-if="!$ctrl.result.result">
+            <div ng-if="$ctrl.result.fake_result <= 1">
                 <i class="material-icons medium" style="color: white;">check_circle</i> This text doesn't seem to have any bias.
             </div>
-            <div ng-if="$ctrl.result.result">
-                <i class="material-icons medium" style="color: red;">blur_on</i> There be bias! This text may be biased.
+            <div ng-if="$ctrl.result.fake_result > 1 &&  $ctrl.result.fake_result < 3">
+                <i class="material-icons medium" style="color: yellow;">blur_on</i> Bias degree is low!
+            </div>
+            <div ng-if="$ctrl.result.fake_result >= 3 && $ctrl.result.fake_result < 5 ">
+                <i class="material-icons medium" style="color: orange;">blur_on</i> Bias degree is medium!
+            </div>
+            <div ng-if="$ctrl.result.fake_result >= 5">
+                <i class="material-icons medium" style="color: red;">blur_on</i> Bias degree is high!
             </div>
         </div>
     </div>
